@@ -1,0 +1,2111 @@
+warning: in the working copy of 'Packages/manifest.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'Packages/packages-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ProjectSettings/ProjectSettings.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ProjectSettings/ShaderGraphSettings.asset', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ProjectSettings/TagManager.asset', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/Packages/manifest.json b/Packages/manifest.json[m
+[1mindex ff10008..1b77efc 100644[m
+[1m--- a/Packages/manifest.json[m
+[1m+++ b/Packages/manifest.json[m
+[36m@@ -1,12 +1,17 @@[m
+ {[m
+   "dependencies": {[m
+     "com.unity.ai.navigation": "2.0.6",[m
+[32m+[m[32m    "com.unity.cinemachine": "2.10.3",[m
+     "com.unity.collab-proxy": "2.7.1",[m
+     "com.unity.ide.rider": "3.0.31",[m
+     "com.unity.ide.visualstudio": "2.0.22",[m
+     "com.unity.inputsystem": "1.14.0",[m
+     "com.unity.multiplayer.center": "1.0.0",[m
+[32m+[m[32m    "com.unity.postprocessing": "3.4.0",[m
+[32m+[m[32m    "com.unity.render-pipelines.core": "17.0.4",[m
+     "com.unity.render-pipelines.universal": "17.0.4",[m
+[32m+[m[32m    "com.unity.shadergraph": "17.0.4",[m
+[32m+[m[32m    "com.unity.splines": "2.8.0",[m
+     "com.unity.test-framework": "1.5.1",[m
+     "com.unity.timeline": "1.8.7",[m
+     "com.unity.ugui": "2.0.0",[m
+[1mdiff --git a/Packages/packages-lock.json b/Packages/packages-lock.json[m
+[1mindex 8265f02..3ce9603 100644[m
+[1m--- a/Packages/packages-lock.json[m
+[1m+++ b/Packages/packages-lock.json[m
+[36m@@ -11,7 +11,7 @@[m
+     },[m
+     "com.unity.burst": {[m
+       "version": "1.8.19",[m
+[31m-      "depth": 2,[m
+[32m+[m[32m      "depth": 1,[m
+       "source": "registry",[m
+       "dependencies": {[m
+         "com.unity.mathematics": "1.2.1",[m
+[36m@@ -19,6 +19,15 @@[m
+       },[m
+       "url": "https://packages.unity.com"[m
+     },[m
+[32m+[m[32m    "com.unity.cinemachine": {[m
+[32m+[m[32m      "version": "2.10.3",[m
+[32m+[m[32m      "depth": 0,[m
+[32m+[m[32m      "source": "registry",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "com.unity.test-framework": "1.1.31"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "url": "https://packages.unity.com"[m
+[32m+[m[32m    },[m
+     "com.unity.collab-proxy": {[m
+       "version": "2.7.1",[m
+       "depth": 0,[m
+[36m@@ -28,7 +37,7 @@[m
+     },[m
+     "com.unity.collections": {[m
+       "version": "2.5.1",[m
+[31m-      "depth": 2,[m
+[32m+[m[32m      "depth": 1,[m
+       "source": "registry",[m
+       "dependencies": {[m
+         "com.unity.burst": "1.8.17",[m
+[36m@@ -73,7 +82,7 @@[m
+     },[m
+     "com.unity.mathematics": {[m
+       "version": "1.3.2",[m
+[31m-      "depth": 2,[m
+[32m+[m[32m      "depth": 1,[m
+       "source": "registry",[m
+       "dependencies": {},[m
+       "url": "https://packages.unity.com"[m
+[36m@@ -88,14 +97,23 @@[m
+     },[m
+     "com.unity.nuget.mono-cecil": {[m
+       "version": "1.11.4",[m
+[31m-      "depth": 3,[m
+[32m+[m[32m      "depth": 2,[m
+       "source": "registry",[m
+       "dependencies": {},[m
+       "url": "https://packages.unity.com"[m
+     },[m
+[32m+[m[32m    "com.unity.postprocessing": {[m
+[32m+[m[32m      "version": "3.4.0",[m
+[32m+[m[32m      "depth": 0,[m
+[32m+[m[32m      "source": "registry",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "com.unity.modules.physics": "1.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "url": "https://packages.unity.com"[m
+[32m+[m[32m    },[m
+     "com.unity.render-pipelines.core": {[m
+       "version": "17.0.4",[m
+[31m-      "depth": 1,[m
+[32m+[m[32m      "depth": 0,[m
+       "source": "builtin",[m
+       "dependencies": {[m
+         "com.unity.burst": "1.8.14",[m
+[36m@@ -128,7 +146,7 @@[m
+     },[m
+     "com.unity.rendering.light-transport": {[m
+       "version": "1.0.1",[m
+[31m-      "depth": 2,[m
+[32m+[m[32m      "depth": 1,[m
+       "source": "builtin",[m
+       "dependencies": {[m
+         "com.unity.collections": "2.2.0",[m
+[36m@@ -138,20 +156,38 @@[m
+     },[m
+     "com.unity.searcher": {[m
+       "version": "4.9.3",[m
+[31m-      "depth": 2,[m
+[32m+[m[32m      "depth": 1,[m
+[32m+[m[32m      "source": "registry",[m
+[32m+[m[32m      "dependencies": {},[m
+[32m+[m[32m      "url": "https://packages.unity.com"[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "com.unity.settings-manager": {[m
+[32m+[m[32m      "version": "2.0.1",[m
+[32m+[m[32m      "depth": 1,[m
+       "source": "registry",[m
+       "dependencies": {},[m
+       "url": "https://packages.unity.com"[m
+     },[m
+     "com.unity.shadergraph": {[m
+       "version": "17.0.4",[m
+[31m-      "depth": 1,[m
+[32m+[m[32m      "depth": 0,[m
+       "source": "builtin",[m
+       "dependencies": {[m
+         "com.unity.render-pipelines.core": "17.0.4",[m
+         "com.unity.searcher": "4.9.3"[m
+       }[m
+     },[m
+[32m+[m[32m    "com.unity.splines": {[m
+[32m+[m[32m      "version": "2.8.0",[m
+[32m+[m[32m      "depth": 0,[m
+[32m+[m[32m      "source": "registry",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "com.unity.mathematics": "1.2.1",[m
+[32m+[m[32m        "com.unity.modules.imgui": "1.0.0",[m
+[32m+[m[32m        "com.unity.settings-manager": "1.0.3"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "url": "https://packages.unity.com"[m
+[32m+[m[32m    },[m
+     "com.unity.test-framework": {[m
+       "version": "1.5.1",[m
+       "depth": 0,[m
+[36m@@ -164,7 +200,7 @@[m
+     },[m
+     "com.unity.test-framework.performance": {[m
+       "version": "3.0.3",[m
+[31m-      "depth": 3,[m
+[32m+[m[32m      "depth": 2,[m
+       "source": "registry",[m
+       "dependencies": {[m
+         "com.unity.test-framework": "1.1.31",[m
+[1mdiff --git a/ProjectSettings/AudioManager.asset b/ProjectSettings/AudioManager.asset[m
+[1mindex 27287fe..07ebfb0 100644[m
+[1m--- a/ProjectSettings/AudioManager.asset[m
+[1m+++ b/ProjectSettings/AudioManager.asset[m
+[36m@@ -16,4 +16,4 @@[m [mAudioManager:[m
+   m_AmbisonicDecoderPlugin: [m
+   m_DisableAudio: 0[m
+   m_VirtualizeEffects: 1[m
+[31m-  m_RequestedDSPBufferSize: 0[m
+[32m+[m[32m  m_RequestedDSPBufferSize: 1024[m
+[1mdiff --git a/ProjectSettings/DynamicsManager.asset b/ProjectSettings/DynamicsManager.asset[m
+[1mindex fc90ab9..0e29bd3 100644[m
+[1m--- a/ProjectSettings/DynamicsManager.asset[m
+[1m+++ b/ProjectSettings/DynamicsManager.asset[m
+[36m@@ -7,6 +7,7 @@[m [mPhysicsManager:[m
+   m_Gravity: {x: 0, y: -9.81, z: 0}[m
+   m_DefaultMaterial: {fileID: 0}[m
+   m_BounceThreshold: 2[m
+[32m+[m[32m  m_DefaultMaxDepenetrationVelocity: 10[m
+   m_SleepThreshold: 0.005[m
+   m_DefaultContactOffset: 0.01[m
+   m_DefaultSolverIterations: 6[m
+[36m@@ -14,12 +15,12 @@[m [mPhysicsManager:[m
+   m_QueriesHitBackfaces: 0[m
+   m_QueriesHitTriggers: 1[m
+   m_EnableAdaptiveForce: 0[m
+[31m-  m_ClothInterCollisionDistance: 0.1[m
+[31m-  m_ClothInterCollisionStiffness: 0.2[m
+[32m+[m[32m  m_ClothInterCollisionDistance: 0[m
+[32m+[m[32m  m_ClothInterCollisionStiffness: 0[m
+   m_ContactsGeneration: 1[m
+   m_LayerCollisionMatrix: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff[m
+   m_AutoSimulation: 1[m
+[31m-  m_AutoSyncTransforms: 0[m
+[32m+[m[32m  m_AutoSyncTransforms: 1[m
+   m_ReuseCollisionCallbacks: 1[m
+   m_ClothInterCollisionSettingsToggle: 0[m
+   m_ClothGravity: {x: 0, y: -9.81, z: 0}[m
+[36m@@ -33,4 +34,4 @@[m [mPhysicsManager:[m
+   m_EnableEnhancedDeterminism: 0[m
+   m_EnableUnifiedHeightmaps: 1[m
+   m_SolverType: 0[m
+[31m-  m_DefaultMaxAngularSpeed: 50[m
+[32m+[m[32m  m_DefaultMaxAngularSpeed: 7[m
+[1mdiff --git a/ProjectSettings/EditorBuildSettings.asset b/ProjectSettings/EditorBuildSettings.asset[m
+[1mindex d057ba3..1ef60ad 100644[m
+[1m--- a/ProjectSettings/EditorBuildSettings.asset[m
+[1m+++ b/ProjectSettings/EditorBuildSettings.asset[m
+[36m@@ -6,8 +6,19 @@[m [mEditorBuildSettings:[m
+   serializedVersion: 2[m
+   m_Scenes:[m
+   - enabled: 1[m
+[31m-    path: Assets/Scenes/SampleScene.unity[m
+[31m-    guid: 99c9720ab356a0642a771bea13969a05[m
+[31m-  m_configObjects:[m
+[31m-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}[m
+[32m+[m[32m    path: Assets/PLAYER TWO/Platformer Project/Examples/Scenes/MainMenu.unity[m
+[32m+[m[32m    guid: 1cf5eb096d96e6c45b07b597b5bdde05[m
+[32m+[m[32m  - enabled: 0[m
+[32m+[m[32m    path: Assets/PLAYER TWO/Platformer Project/Examples/Scenes/FileSelect.unity[m
+[32m+[m[32m    guid: 784a971f04705024890fd845c19c2832[m
+[32m+[m[32m  - enabled: 0[m
+[32m+[m[32m    path: Assets/PLAYER TWO/Platformer Project/Examples/Scenes/LevelSelect.unity[m
+[32m+[m[32m    guid: 1334fc2701a18a04287675bd4ebab3ac[m
+[32m+[m[32m  - enabled: 1[m
+[32m+[m[32m    path: Assets/PLAYER TWO/Platformer Project/Examples/Scenes/TestLevelScene.unity[m
+[32m+[m[32m    guid: 278a551158294f341b62da4310b65882[m
+[32m+[m[32m  - enabled: 1[m
+[32m+[m[32m    path: Assets/PLAYER TWO/Platformer Project/Examples/Scenes/TestLevelScene 2.unity[m
+[32m+[m[32m    guid: c7fa87c38f465d249b0f3b291e5de4d4[m
+[32m+[m[32m  m_configObjects: {}[m
+   m_UseUCBPForAssetBundles: 0[m
+[1mdiff --git a/ProjectSettings/EditorSettings.asset b/ProjectSettings/EditorSettings.asset[m
+[1mindex fc70035..efa9885 100644[m
+[1m--- a/ProjectSettings/EditorSettings.asset[m
+[1m+++ b/ProjectSettings/EditorSettings.asset[m
+[36m@@ -3,47 +3,33 @@[m
+ --- !u!159 &1[m
+ EditorSettings:[m
+   m_ObjectHideFlags: 0[m
+[31m-  serializedVersion: 14[m
+[32m+[m[32m  serializedVersion: 9[m
+[32m+[m[32m  m_ExternalVersionControlSupport: Visible Meta Files[m
+   m_SerializationMode: 2[m
+   m_LineEndingsForNewScripts: 0[m
+   m_DefaultBehaviorMode: 0[m
+   m_PrefabRegularEnvironment: {fileID: 0}[m
+   m_PrefabUIEnvironment: {fileID: 0}[m
+   m_SpritePackerMode: 0[m
+[31m-  m_SpritePackerCacheSize: 10[m
+   m_SpritePackerPaddingPower: 1[m
+[31m-  m_Bc7TextureCompressor: 0[m
+   m_EtcTextureCompressorBehavior: 1[m
+   m_EtcTextureFastCompressor: 1[m
+   m_EtcTextureNormalCompressor: 2[m
+   m_EtcTextureBestCompressor: 4[m
+   m_ProjectGenerationIncludedExtensions: txt;xml;fnt;cd;asmdef;rsp;asmref[m
+   m_ProjectGenerationRootNamespace: [m
+[32m+[m[32m  m_CollabEditorSettings:[m
+[32m+[m[32m    inProgressEnabled: 1[m
+   m_EnableTextureStreamingInEditMode: 1[m
+   m_EnableTextureStreamingInPlayMode: 1[m
+[31m-  m_EnableEditorAsyncCPUTextureLoading: 0[m
+   m_AsyncShaderCompilation: 1[m
+[31m-  m_PrefabModeAllowAutoSave: 1[m
+[31m-  m_EnterPlayModeOptionsEnabled: 1[m
+[31m-  m_EnterPlayModeOptions: 0[m
+[31m-  m_GameObjectNamingDigits: 1[m
+[31m-  m_GameObjectNamingScheme: 0[m
+[31m-  m_AssetNamingUsesSpace: 1[m
+[31m-  m_InspectorUseIMGUIDefaultInspector: 0[m
+[32m+[m[32m  m_EnterPlayModeOptionsEnabled: 0[m
+[32m+[m[32m  m_EnterPlayModeOptions: 3[m
+[32m+[m[32m  m_ShowLightmapResolutionOverlay: 1[m
+   m_UseLegacyProbeSampleCount: 0[m
+[31m-  m_SerializeInlineMappingsOnOneLine: 1[m
+[31m-  m_DisableCookiesInLightmapper: 0[m
+[31m-  m_ShadowmaskStitching: 0[m
+[31m-  m_AssetPipelineMode: 1[m
+[31m-  m_RefreshImportMode: 0[m
+[32m+[m[32m  m_AssetPipelineMode: 0[m
+   m_CacheServerMode: 0[m
+   m_CacheServerEndpoint: [m
+   m_CacheServerNamespacePrefix: default[m
+   m_CacheServerEnableDownload: 1[m
+   m_CacheServerEnableUpload: 1[m
+[31m-  m_CacheServerEnableAuth: 0[m
+[31m-  m_CacheServerEnableTls: 0[m
+[31m-  m_CacheServerValidationMode: 2[m
+[31m-  m_CacheServerDownloadBatchSize: 128[m
+[31m-  m_EnableEnlightenBakedGI: 0[m
+[31m-  m_ReferencedClipsExactNaming: 1[m
+[1mdiff --git a/ProjectSettings/GraphicsSettings.asset b/ProjectSettings/GraphicsSettings.asset[m
+[1mindex aa5a1c3..11d6d92 100644[m
+[1m--- a/ProjectSettings/GraphicsSettings.asset[m
+[1m+++ b/ProjectSettings/GraphicsSettings.asset[m
+[36m@@ -33,12 +33,11 @@[m [mGraphicsSettings:[m
+   - {fileID: 15106, guid: 0000000000000000f000000000000000, type: 0}[m
+   - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}[m
+   - {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}[m
+[31m-  - {fileID: 10783, guid: 0000000000000000f000000000000000, type: 0}[m
+   m_PreloadedShaders: [][m
+   m_PreloadShadersBatchTimeLimit: -1[m
+   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000,[m
+     type: 0}[m
+[31m-  m_CustomRenderPipeline: {fileID: 11400000, guid: 4b83569d67af61e458304325a23e5dfd,[m
+[32m+[m[32m  m_CustomRenderPipeline: {fileID: 11400000, guid: 83d261228b69f1647b0fa8827e768eb4,[m
+     type: 2}[m
+   m_TransparencySortMode: 0[m
+   m_TransparencySortAxis: {x: 0, y: 0, z: 1}[m
+[36m@@ -60,7 +59,9 @@[m [mGraphicsSettings:[m
+   m_FogKeepExp2: 1[m
+   m_AlbedoSwatchInfos: [][m
+   m_RenderPipelineGlobalSettingsMap:[m
+[31m-    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: 18dc0cd2c080841dea60987a38ce93fa,[m
+[32m+[m[32m    UnityEngine.Rendering.HighDefinition.HDRenderPipeline: {fileID: 11400000, guid: 2b8f7389e7d172b4c90cc41867349a8e,[m
+[32m+[m[32m      type: 2}[m
+[32m+[m[32m    UnityEngine.Rendering.Universal.UniversalRenderPipeline: {fileID: 11400000, guid: 980766299e2f2864ab07d2fff38b1e92,[m
+       type: 2}[m
+   m_LightsUseLinearIntensity: 1[m
+   m_LightsUseColorTemperature: 1[m
+[1mdiff --git a/ProjectSettings/InputManager.asset b/ProjectSettings/InputManager.asset[m
+[1mindex b16147e..e208756 100644[m
+[1m--- a/ProjectSettings/InputManager.asset[m
+[1m+++ b/ProjectSettings/InputManager.asset[m
+[36m@@ -7,8 +7,8 @@[m [mInputManager:[m
+   m_Axes:[m
+   - serializedVersion: 3[m
+     m_Name: Horizontal[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+     negativeButton: left[m
+     positiveButton: right[m
+     altNegativeButton: a[m
+[36m@@ -23,8 +23,8 @@[m [mInputManager:[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+     m_Name: Vertical[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+     negativeButton: down[m
+     positiveButton: up[m
+     altNegativeButton: s[m
+[36m@@ -38,29 +38,45 @@[m [mInputManager:[m
+     axis: 0[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Fire1[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: left ctrl[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: mouse 0[m
+[31m-    gravity: 1000[m
+[31m-    dead: 0.001[m
+[31m-    sensitivity: 1000[m
+[32m+[m[32m    m_Name: Horizontal[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0.19[m
+[32m+[m[32m    sensitivity: 1[m
+     snap: 0[m
+     invert: 0[m
+[31m-    type: 0[m
+[32m+[m[32m    type: 2[m
+     axis: 0[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Fire2[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: left alt[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: mouse 1[m
+[32m+[m[32m    m_Name: Vertical[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0.19[m
+[32m+[m[32m    sensitivity: 1[m
+[32m+[m[32m    snap: 0[m
+[32m+[m[32m    invert: 1[m
+[32m+[m[32m    type: 2[m
+[32m+[m[32m    axis: 1[m
+[32m+[m[32m    joyNum: 0[m
+[32m+[m[32m  - serializedVersion: 3[m
+[32m+[m[32m    m_Name: Submit[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: return[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 0[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+[36m@@ -70,13 +86,13 @@[m [mInputManager:[m
+     axis: 0[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Fire3[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: left shift[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: mouse 2[m
+[32m+[m[32m    m_Name: Submit[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: enter[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: space[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+[36m@@ -86,13 +102,13 @@[m [mInputManager:[m
+     axis: 0[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Jump[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: space[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    m_Name: Cancel[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: escape[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 1[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+[36m@@ -103,15 +119,15 @@[m [mInputManager:[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+     m_Name: Mouse X[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: [m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+     gravity: 0[m
+     dead: 0[m
+[31m-    sensitivity: 0.1[m
+[32m+[m[32m    sensitivity: 0.2[m
+     snap: 0[m
+     invert: 0[m
+     type: 1[m
+[36m@@ -119,44 +135,28 @@[m [mInputManager:[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+     m_Name: Mouse Y[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: [m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+     gravity: 0[m
+     dead: 0[m
+[31m-    sensitivity: 0.1[m
+[32m+[m[32m    sensitivity: 0.2[m
+     snap: 0[m
+     invert: 0[m
+     type: 1[m
+     axis: 1[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Mouse ScrollWheel[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: [m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0.1[m
+[31m-    snap: 0[m
+[31m-    invert: 0[m
+[31m-    type: 1[m
+[31m-    axis: 2[m
+[31m-    joyNum: 0[m
+[31m-  - serializedVersion: 3[m
+[31m-    m_Name: Horizontal[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: [m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    m_Name: LeftThumbHorizontal[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+     gravity: 0[m
+     dead: 0.19[m
+     sensitivity: 1[m
+[36m@@ -164,15 +164,15 @@[m [mInputManager:[m
+     invert: 0[m
+     type: 2[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Vertical[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: [m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    m_Name: LeftThumbVertical[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+     gravity: 0[m
+     dead: 0.19[m
+     sensitivity: 1[m
+[36m@@ -180,255 +180,303 @@[m [mInputManager:[m
+     invert: 1[m
+     type: 2[m
+     axis: 1[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Fire1[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: joystick button 0[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[31m-    gravity: 1000[m
+[32m+[m[32m    m_Name: LeftThumbHorizontal[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton: a[m
+[32m+[m[32m    positiveButton: d[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 99[m
+     dead: 0.001[m
+[31m-    sensitivity: 1000[m
+[31m-    snap: 0[m
+[32m+[m[32m    sensitivity: 999[m
+[32m+[m[32m    snap: 1[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Fire2[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: joystick button 1[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[31m-    gravity: 1000[m
+[32m+[m[32m    m_Name: LeftThumbVertical[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton: s[m
+[32m+[m[32m    positiveButton: w[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 99[m
+     dead: 0.001[m
+[31m-    sensitivity: 1000[m
+[31m-    snap: 0[m
+[32m+[m[32m    sensitivity: 999[m
+[32m+[m[32m    snap: 1[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Fire3[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: joystick button 2[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[31m-    gravity: 1000[m
+[31m-    dead: 0.001[m
+[31m-    sensitivity: 1000[m
+[32m+[m[32m    m_Name: RightThumbHorizontal[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0.19[m
+[32m+[m[32m    sensitivity: 1[m
+[32m+[m[32m    snap: 0[m
+[32m+[m[32m    invert: 0[m
+[32m+[m[32m    type: 2[m
+[32m+[m[32m    axis: 3[m
+[32m+[m[32m    joyNum: 1[m
+[32m+[m[32m  - serializedVersion: 3[m
+[32m+[m[32m    m_Name: RightThumbVertical[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0.19[m
+[32m+[m[32m    sensitivity: 1[m
+[32m+[m[32m    snap: 0[m
+[32m+[m[32m    invert: 1[m
+[32m+[m[32m    type: 2[m
+[32m+[m[32m    axis: 4[m
+[32m+[m[32m    joyNum: 1[m
+[32m+[m[32m  - serializedVersion: 3[m
+[32m+[m[32m    m_Name: RightThumbHorizontal[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0[m
+[32m+[m[32m    sensitivity: 0.2[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Jump[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: joystick button 3[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[31m-    gravity: 1000[m
+[31m-    dead: 0.001[m
+[31m-    sensitivity: 1000[m
+[32m+[m[32m    m_Name: RightThumbVertical[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0[m
+[32m+[m[32m    sensitivity: 0.2[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+[31m-    axis: 0[m
+[32m+[m[32m    axis: 1[m
+     joyNum: 0[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Submit[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: return[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 0[m
+[32m+[m[32m    m_Name: DPadHorizontal[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0.19[m
+[32m+[m[32m    sensitivity: 1[m
+[32m+[m[32m    snap: 0[m
+[32m+[m[32m    invert: 1[m
+[32m+[m[32m    type: 2[m
+[32m+[m[32m    axis: 5[m
+[32m+[m[32m    joyNum: 1[m
+[32m+[m[32m  - serializedVersion: 3[m
+[32m+[m[32m    m_Name: DPadVertical[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 0[m
+[32m+[m[32m    dead: 0.19[m
+[32m+[m[32m    sensitivity: 1[m
+[32m+[m[32m    snap: 0[m
+[32m+[m[32m    invert: 1[m
+[32m+[m[32m    type: 2[m
+[32m+[m[32m    axis: 6[m
+[32m+[m[32m    joyNum: 1[m
+[32m+[m[32m  - serializedVersion: 3[m
+[32m+[m[32m    m_Name: RightTrigger[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+[31m-    type: 0[m
+[31m-    axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    type: 2[m
+[32m+[m[32m    axis: 9[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Submit[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: enter[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: space[m
+[32m+[m[32m    m_Name: LeftTrigger[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+[31m-    type: 0[m
+[31m-    axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    type: 2[m
+[32m+[m[32m    axis: 8[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Cancel[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: escape[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 1[m
+[32m+[m[32m    m_Name: RightTrigger[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+[31m-    axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    axis: 8[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Enable Debug Button 1[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: left ctrl[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 8[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[32m+[m[32m    m_Name: LeftTrigger[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton:[m
+[32m+[m[32m    gravity: 1000[m
+[32m+[m[32m    dead: 0.001[m
+[32m+[m[32m    sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+[31m-    axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    axis: 8[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Enable Debug Button 2[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: backspace[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 9[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[32m+[m[32m    m_Name: A[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: space[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 0[m
+[32m+[m[32m    gravity: 1000[m
+[32m+[m[32m    dead: 0.001[m
+[32m+[m[32m    sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Reset[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: left alt[m
+[31m-    altNegativeButton: [m
+[32m+[m[32m    m_Name: B[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: s[m
+[32m+[m[32m    altNegativeButton:[m
+     altPositiveButton: joystick button 1[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[31m-    snap: 0[m
+[31m-    invert: 0[m
+[31m-    type: 0[m
+[31m-    axis: 0[m
+[31m-    joyNum: 0[m
+[31m-  - serializedVersion: 3[m
+[31m-    m_Name: Debug Next[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: page down[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 5[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[32m+[m[32m    gravity: 1000[m
+[32m+[m[32m    dead: 0.001[m
+[32m+[m[32m    sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Previous[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: page up[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 4[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[32m+[m[32m    m_Name: X[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: left shift[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 2[m
+[32m+[m[32m    gravity: 1000[m
+[32m+[m[32m    dead: 0.001[m
+[32m+[m[32m    sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Validate[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: return[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 0[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[32m+[m[32m    m_Name: Y[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: g[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 3[m
+[32m+[m[32m    gravity: 1000[m
+[32m+[m[32m    dead: 0.001[m
+[32m+[m[32m    sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Persistent[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: right shift[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 2[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[32m+[m[32m    m_Name: RightBumper[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: e[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 5[m
+[32m+[m[32m    gravity: 1000[m
+[32m+[m[32m    dead: 0.001[m
+[32m+[m[32m    sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Multiplier[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: [m
+[31m-    positiveButton: left shift[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: joystick button 3[m
+[31m-    gravity: 0[m
+[31m-    dead: 0[m
+[31m-    sensitivity: 0[m
+[32m+[m[32m    m_Name: LeftBumper[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: d[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 4[m
+[32m+[m[32m    gravity: 1000[m
+[32m+[m[32m    dead: 0.001[m
+[32m+[m[32m    sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Horizontal[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: left[m
+[31m-    positiveButton: right[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    m_Name: RightThumb[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 9[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+[36m@@ -436,15 +484,15 @@[m [mInputManager:[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Vertical[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: down[m
+[31m-    positiveButton: up[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    m_Name: LeftThumb[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton:[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 8[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+[36m@@ -452,36 +500,36 @@[m [mInputManager:[m
+     invert: 0[m
+     type: 0[m
+     axis: 0[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Vertical[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: down[m
+[31m-    positiveButton: up[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    m_Name: Start[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: escape[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 7[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+[31m-    type: 2[m
+[31m-    axis: 6[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    type: 0[m
+[32m+[m[32m    axis: 0[m
+[32m+[m[32m    joyNum: 1[m
+   - serializedVersion: 3[m
+[31m-    m_Name: Debug Horizontal[m
+[31m-    descriptiveName: [m
+[31m-    descriptiveNegativeName: [m
+[31m-    negativeButton: left[m
+[31m-    positiveButton: right[m
+[31m-    altNegativeButton: [m
+[31m-    altPositiveButton: [m
+[32m+[m[32m    m_Name: Back[m
+[32m+[m[32m    descriptiveName:[m
+[32m+[m[32m    descriptiveNegativeName:[m
+[32m+[m[32m    negativeButton:[m
+[32m+[m[32m    positiveButton: backspace[m
+[32m+[m[32m    altNegativeButton:[m
+[32m+[m[32m    altPositiveButton: joystick button 6[m
+     gravity: 1000[m
+     dead: 0.001[m
+     sensitivity: 1000[m
+     snap: 0[m
+     invert: 0[m
+[31m-    type: 2[m
+[31m-    axis: 5[m
+[31m-    joyNum: 0[m
+[32m+[m[32m    type: 0[m
+[32m+[m[32m    axis: 0[m
+[32m+[m[32m    joyNum: 1[m
+[1mdiff --git a/ProjectSettings/Physics2DSettings.asset b/ProjectSettings/Physics2DSettings.asset[m
+[1mindex 6c5cf8a..47880b1 100644[m
+[1m--- a/ProjectSettings/Physics2DSettings.asset[m
+[1m+++ b/ProjectSettings/Physics2DSettings.asset[m
+[36m@@ -42,7 +42,7 @@[m [mPhysics2DSettings:[m
+   m_QueriesHitTriggers: 1[m
+   m_QueriesStartInColliders: 1[m
+   m_CallbacksOnDisable: 1[m
+[31m-  m_ReuseCollisionCallbacks: 0[m
+[32m+[m[32m  m_ReuseCollisionCallbacks: 1[m
+   m_AutoSyncTransforms: 0[m
+   m_AlwaysShowColliders: 0[m
+   m_ShowColliderSleep: 1[m
+[1mdiff --git a/ProjectSettings/ProjectSettings.asset b/ProjectSettings/ProjectSettings.asset[m
+[1mindex 7db445d..0807c4e 100644[m
+[1m--- a/ProjectSettings/ProjectSettings.asset[m
+[1m+++ b/ProjectSettings/ProjectSettings.asset[m
+[36m@@ -4,11 +4,11 @@[m
+ PlayerSettings:[m
+   m_ObjectHideFlags: 0[m
+   serializedVersion: 28[m
+[31m-  productGUID: 9ba0db184b7d38342b5fde28eb799f1a[m
+[32m+[m[32m  productGUID: 00000000000000000000000000000000[m
+   AndroidProfiler: 0[m
+   AndroidFilterTouchesWhenObscured: 0[m
+   AndroidEnableSustainedPerformanceMode: 0[m
+[31m-  defaultScreenOrientation: 4[m
+[32m+[m[32m  defaultScreenOrientation: 3[m
+   targetDevice: 2[m
+   useOnDemandResources: 0[m
+   accelerometerFrequency: 60[m
+[36m@@ -69,7 +69,7 @@[m [mPlayerSettings:[m
+   disableDepthAndStencilBuffers: 0[m
+   androidStartInFullscreen: 1[m
+   androidRenderOutsideSafeArea: 1[m
+[31m-  androidUseSwappy: 0[m
+[32m+[m[32m  androidUseSwappy: 1[m
+   androidBlitType: 0[m
+   androidResizeableActivity: 1[m
+   androidDefaultWindowWidth: 1920[m
+[36m@@ -82,7 +82,7 @@[m [mPlayerSettings:[m
+   androidApplicationEntry: 2[m
+   defaultIsNativeResolution: 1[m
+   macRetinaSupport: 1[m
+[31m-  runInBackground: 0[m
+[32m+[m[32m  runInBackground: 1[m
+   muteOtherAudioSources: 0[m
+   Prepare IOS For Recording: 0[m
+   Force IOS Speakers When Recording: 0[m
+[36m@@ -120,7 +120,7 @@[m [mPlayerSettings:[m
+   xboxOneDisableEsram: 0[m
+   xboxOneEnableTypeOptimization: 0[m
+   xboxOnePresentImmediateThreshold: 0[m
+[31m-  switchQueueCommandMemory: 1048576[m
+[32m+[m[32m  switchQueueCommandMemory: 0[m
+   switchQueueControlMemory: 16384[m
+   switchQueueComputeMemory: 262144[m
+   switchNVNShaderPoolsGranularity: 33554432[m
+[36m@@ -134,13 +134,13 @@[m [mPlayerSettings:[m
+   switchNVNGraphicsFirmwareMemory: 32[m
+   vulkanNumSwapchainBuffers: 3[m
+   vulkanEnableSetSRGBWrite: 0[m
+[31m-  vulkanEnablePreTransform: 1[m
+[32m+[m[32m  vulkanEnablePreTransform: 0[m
+   vulkanEnableLateAcquireNextImage: 0[m
+   vulkanEnableCommandBufferRecycling: 1[m
+   loadStoreDebugModeEnabled: 0[m
+   visionOSBundleVersion: 1.0[m
+   tvOSBundleVersion: 1.0[m
+[31m-  bundleVersion: 0.1.0[m
+[32m+[m[32m  bundleVersion: 0.1[m
+   preloadedAssets: [][m
+   metroInputSource: 0[m
+   wsaTransparentSwapchain: 0[m
+[36m@@ -163,15 +163,14 @@[m [mPlayerSettings:[m
+   androidMaxAspectRatio: 2.4[m
+   androidMinAspectRatio: 1[m
+   applicationIdentifier:[m
+[31m-    Android: com.UnityTechnologies.com.unity.template.urpblank[m
+[31m-    Standalone: com.Unity-Technologies.com.unity.template.urp-blank[m
+[31m-    iPhone: com.Unity-Technologies.com.unity.template.urp-blank[m
+[32m+[m[32m    Android: com.PLAYERTWO.platformerproject[m
+[32m+[m[32m    Standalone: com.PLAYERTWO.platformer-project[m
+   buildNumber:[m
+     Standalone: 0[m
+     VisionOS: 0[m
+     iPhone: 0[m
+     tvOS: 0[m
+[31m-  overrideDefaultApplicationIdentifier: 1[m
+[32m+[m[32m  overrideDefaultApplicationIdentifier: 0[m
+   AndroidBundleVersionCode: 1[m
+   AndroidMinSdkVersion: 23[m
+   AndroidTargetSdkVersion: 0[m
+[36m@@ -185,7 +184,7 @@[m [mPlayerSettings:[m
+   CreateWallpaper: 0[m
+   androidSplitApplicationBinary: 0[m
+   keepLoadedShadersAlive: 0[m
+[31m-  StripUnusedMeshComponents: 0[m
+[32m+[m[32m  StripUnusedMeshComponents: 1[m
+   strictShaderVariantMatching: 0[m
+   VertexChannelCompressionMask: 4054[m
+   iPhoneSdkVersion: 988[m
+[36m@@ -252,8 +251,8 @@[m [mPlayerSettings:[m
+   iOSAutomaticallyDetectAndAddCapabilities: 1[m
+   appleEnableProMotion: 0[m
+   shaderPrecisionModel: 0[m
+[31m-  clonedFromGUID: 3c72c65a16f0acb438eed22b8b16c24a[m
+[31m-  templatePackageId: com.unity.template.urp-blank@17.0.11[m
+[32m+[m[32m  clonedFromGUID: 8e51f2932779f6e47a9a5c03cb0779c1[m
+[32m+[m[32m  templatePackageId:[m[41m [m
+   templateDefaultScene: Assets/Scenes/SampleScene.unity[m
+   useCustomMainManifest: 0[m
+   useCustomLauncherManifest: 0[m
+[36m@@ -290,103 +289,6 @@[m [mPlayerSettings:[m
+   androidSymbolsSizeThreshold: 800[m
+   m_BuildTargetIcons: [][m
+   m_BuildTargetPlatformIcons:[m
+[31m-  - m_BuildTarget: iPhone[m
+[31m-    m_Icons:[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 180[m
+[31m-      m_Height: 180[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 120[m
+[31m-      m_Height: 120[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 167[m
+[31m-      m_Height: 167[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 152[m
+[31m-      m_Height: 152[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 76[m
+[31m-      m_Height: 76[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 120[m
+[31m-      m_Height: 120[m
+[31m-      m_Kind: 3[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 80[m
+[31m-      m_Height: 80[m
+[31m-      m_Kind: 3[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 80[m
+[31m-      m_Height: 80[m
+[31m-      m_Kind: 3[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 40[m
+[31m-      m_Height: 40[m
+[31m-      m_Kind: 3[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 87[m
+[31m-      m_Height: 87[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 58[m
+[31m-      m_Height: 58[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 29[m
+[31m-      m_Height: 29[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 58[m
+[31m-      m_Height: 58[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 29[m
+[31m-      m_Height: 29[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 60[m
+[31m-      m_Height: 60[m
+[31m-      m_Kind: 2[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 40[m
+[31m-      m_Height: 40[m
+[31m-      m_Kind: 2[m
+[31m-      m_SubKind: iPhone[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 40[m
+[31m-      m_Height: 40[m
+[31m-      m_Kind: 2[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 20[m
+[31m-      m_Height: 20[m
+[31m-      m_Kind: 2[m
+[31m-      m_SubKind: iPad[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 1024[m
+[31m-      m_Height: 1024[m
+[31m-      m_Kind: 4[m
+[31m-      m_SubKind: App Store[m
+   - m_BuildTarget: Android[m
+     m_Icons:[m
+     - m_Textures: [][m
+[36m@@ -422,112 +324,131 @@[m [mPlayerSettings:[m
+     - m_Textures: [][m
+       m_Width: 192[m
+       m_Height: 192[m
+[31m-      m_Kind: 1[m
+[32m+[m[32m      m_Kind: 0[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 144[m
+       m_Height: 144[m
+[31m-      m_Kind: 1[m
+[32m+[m[32m      m_Kind: 0[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 96[m
+       m_Height: 96[m
+[31m-      m_Kind: 1[m
+[32m+[m[32m      m_Kind: 0[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 72[m
+       m_Height: 72[m
+[31m-      m_Kind: 1[m
+[32m+[m[32m      m_Kind: 0[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 48[m
+       m_Height: 48[m
+[31m-      m_Kind: 1[m
+[32m+[m[32m      m_Kind: 0[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 36[m
+       m_Height: 36[m
+[31m-      m_Kind: 1[m
+[32m+[m[32m      m_Kind: 0[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 192[m
+       m_Height: 192[m
+[31m-      m_Kind: 0[m
+[32m+[m[32m      m_Kind: 1[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 144[m
+       m_Height: 144[m
+[31m-      m_Kind: 0[m
+[32m+[m[32m      m_Kind: 1[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 96[m
+       m_Height: 96[m
+[31m-      m_Kind: 0[m
+[32m+[m[32m      m_Kind: 1[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 72[m
+       m_Height: 72[m
+[31m-      m_Kind: 0[m
+[32m+[m[32m      m_Kind: 1[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 48[m
+       m_Height: 48[m
+[31m-      m_Kind: 0[m
+[32m+[m[32m      m_Kind: 1[m
+       m_SubKind: [m
+     - m_Textures: [][m
+       m_Width: 36[m
+       m_Height: 36[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: [m
+[31m-  - m_BuildTarget: tvOS[m
+[31m-    m_Icons:[m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 1280[m
+[31m-      m_Height: 768[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: [m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 800[m
+[31m-      m_Height: 480[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: [m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 400[m
+[31m-      m_Height: 240[m
+[31m-      m_Kind: 0[m
+[31m-      m_SubKind: [m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 4640[m
+[31m-      m_Height: 1440[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: [m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 2320[m
+[31m-      m_Height: 720[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: [m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 3840[m
+[31m-      m_Height: 1440[m
+[31m-      m_Kind: 1[m
+[31m-      m_SubKind: [m
+[31m-    - m_Textures: [][m
+[31m-      m_Width: 1920[m
+[31m-      m_Height: 720[m
+       m_Kind: 1[m
+       m_SubKind: [m
+[31m-  m_BuildTargetBatching: [][m
+[32m+[m[32m  m_BuildTargetBatching:[m
+[32m+[m[32m  - m_BuildTarget: Standalone[m
+[32m+[m[32m    m_StaticBatching: 1[m
+[32m+[m[32m    m_DynamicBatching: 0[m
+[32m+[m[32m  - m_BuildTarget: tvOS[m
+[32m+[m[32m    m_StaticBatching: 1[m
+[32m+[m[32m    m_DynamicBatching: 0[m
+[32m+[m[32m  - m_BuildTarget: Android[m
+[32m+[m[32m    m_StaticBatching: 1[m
+[32m+[m[32m    m_DynamicBatching: 0[m
+[32m+[m[32m  - m_BuildTarget: iPhone[m
+[32m+[m[32m    m_StaticBatching: 1[m
+[32m+[m[32m    m_DynamicBatching: 0[m
+[32m+[m[32m  - m_BuildTarget: WebGL[m
+[32m+[m[32m    m_StaticBatching: 0[m
+[32m+[m[32m    m_DynamicBatching: 0[m
+   m_BuildTargetShaderSettings: [][m
+[31m-  m_BuildTargetGraphicsJobs: [][m
+[31m-  m_BuildTargetGraphicsJobMode: [][m
+[32m+[m[32m  m_BuildTargetGraphicsJobs:[m
+[32m+[m[32m  - m_BuildTarget: MacStandaloneSupport[m
+[32m+[m[32m    m_GraphicsJobs: 0[m
+[32m+[m[32m  - m_BuildTarget: Switch[m
+[32m+[m[32m    m_GraphicsJobs: 1[m
+[32m+[m[32m  - m_BuildTarget: MetroSupport[m
+[32m+[m[32m    m_GraphicsJobs: 1[m
+[32m+[m[32m  - m_BuildTarget: AppleTVSupport[m
+[32m+[m[32m    m_GraphicsJobs: 0[m
+[32m+[m[32m  - m_BuildTarget: BJMSupport[m
+[32m+[m[32m    m_GraphicsJobs: 1[m
+[32m+[m[32m  - m_BuildTarget: LinuxStandaloneSupport[m
+[32m+[m[32m    m_GraphicsJobs: 1[m
+[32m+[m[32m  - m_BuildTarget: PS4Player[m
+[32m+[m[32m    m_GraphicsJobs: 1[m
+[32m+[m[32m  - m_BuildTarget: iOSSupport[m
+[32m+[m[32m    m_GraphicsJobs: 0[m
+[32m+[m[32m  - m_BuildTarget: WindowsStandaloneSupport[m
+[32m+[m[32m    m_GraphicsJobs: 1[m
+[32m+[m[32m  - m_BuildTarget: XboxOnePlayer[m
+[32m+[m[32m    m_GraphicsJobs: 1[m
+[32m+[m[32m  - m_BuildTarget: LuminSupport[m
+[32m+[m[32m    m_GraphicsJobs: 0[m
+[32m+[m[32m  - m_BuildTarget: AndroidPlayer[m
+[32m+[m[32m    m_GraphicsJobs: 0[m
+[32m+[m[32m  - m_BuildTarget: WebGLSupport[m
+[32m+[m[32m    m_GraphicsJobs: 0[m
+[32m+[m[32m  m_BuildTargetGraphicsJobMode:[m
+[32m+[m[32m  - m_BuildTarget: PS4Player[m
+[32m+[m[32m    m_GraphicsJobMode: 0[m
+[32m+[m[32m  - m_BuildTarget: XboxOnePlayer[m
+[32m+[m[32m    m_GraphicsJobMode: 0[m
+   m_BuildTargetGraphicsAPIs:[m
+[32m+[m[32m  - m_BuildTarget: AndroidPlayer[m
+[32m+[m[32m    m_APIs: 150000000b000000[m
+[32m+[m[32m    m_Automatic: 1[m
+   - m_BuildTarget: iOSSupport[m
+     m_APIs: 10000000[m
+     m_Automatic: 1[m
+[31m-  - m_BuildTarget: AndroidPlayer[m
+[31m-    m_APIs: 150000000b000000[m
+[32m+[m[32m  - m_BuildTarget: AppleTVSupport[m
+[32m+[m[32m    m_APIs: 10000000[m
+[32m+[m[32m    m_Automatic: 1[m
+[32m+[m[32m  - m_BuildTarget: WebGLSupport[m
+[32m+[m[32m    m_APIs: 0b000000[m
+     m_Automatic: 0[m
+[31m-  m_BuildTargetVRSettings: [][m
+[32m+[m[32m  m_BuildTargetVRSettings:[m
+[32m+[m[32m  - m_BuildTarget: Standalone[m
+[32m+[m[32m    m_Enabled: 0[m
+[32m+[m[32m    m_Devices:[m
+[32m+[m[32m    - Oculus[m
+[32m+[m[32m    - OpenVR[m
+   m_DefaultShaderChunkSizeInMB: 16[m
+   m_DefaultShaderChunkCount: 0[m
+   openGLRequireES31: 0[m
+[36m@@ -538,19 +459,14 @@[m [mPlayerSettings:[m
+     Android: 1[m
+     iPhone: 1[m
+     tvOS: 1[m
+[31m-  m_BuildTargetGroupLightmapEncodingQuality:[m
+[31m-  - serializedVersion: 2[m
+[31m-    m_BuildTarget: Android[m
+[31m-    m_EncodingQuality: 1[m
+[32m+[m[32m  m_BuildTargetGroupLightmapEncodingQuality: [][m
+   m_BuildTargetGroupLightmapSettings: [][m
+   m_BuildTargetGroupLoadStoreDebugModeSettings: [][m
+[31m-  m_BuildTargetNormalMapEncoding:[m
+[31m-  - m_BuildTarget: Android[m
+[31m-    m_Encoding: 1[m
+[32m+[m[32m  m_BuildTargetNormalMapEncoding: [][m
+   m_BuildTargetDefaultTextureCompressionFormat:[m
+   - serializedVersion: 3[m
+     m_BuildTarget: Android[m
+[31m-    m_Formats: 03000000[m
+[32m+[m[32m    m_Formats: 01000000[m
+   playModeTestRunnerEnabled: 0[m
+   runPlayModeTestAsEditModeTest: 0[m
+   actionOnDotNetUnhandledException: 1[m
+[36m@@ -702,7 +618,7 @@[m [mPlayerSettings:[m
+   switchNetworkInterfaceManagerInitializeEnabled: 1[m
+   switchDisableHTCSPlayerConnection: 0[m
+   switchUseNewStyleFilepaths: 0[m
+[31m-  switchUseLegacyFmodPriorities: 0[m
+[32m+[m[32m  switchUseLegacyFmodPriorities: 1[m
+   switchUseMicroSleepForYield: 1[m
+   switchEnableRamDiskSupport: 0[m
+   switchMicroSleepForYieldTime: 25[m
+[36m@@ -739,7 +655,7 @@[m [mPlayerSettings:[m
+   ps4RemotePlayKeyAssignment: -1[m
+   ps4RemotePlayKeyMappingDir: [m
+   ps4PlayTogetherPlayerCount: 0[m
+[31m-  ps4EnterButtonAssignment: 2[m
+[32m+[m[32m  ps4EnterButtonAssignment: 1[m
+   ps4ApplicationParam1: 0[m
+   ps4ApplicationParam2: 0[m
+   ps4ApplicationParam3: 0[m
+[36m@@ -762,7 +678,7 @@[m [mPlayerSettings:[m
+   ps4UseAudio3dBackend: 0[m
+   ps4UseLowGarlicFragmentationMode: 1[m
+   ps4SocialScreenEnabled: 0[m
+[31m-  ps4ScriptOptimizationLevel: 2[m
+[32m+[m[32m  ps4ScriptOptimizationLevel: 0[m
+   ps4Audio3dVirtualSpeakerCount: 14[m
+   ps4attribCpuUsage: 0[m
+   ps4PatchPkgPath: [m
+[36m@@ -788,7 +704,7 @@[m [mPlayerSettings:[m
+   splashScreenBackgroundSourcePortrait: {fileID: 0}[m
+   blurSplashScreenBackground: 1[m
+   spritePackerPolicy: [m
+[31m-  webGLMemorySize: 32[m
+[32m+[m[32m  webGLMemorySize: 16[m
+   webGLExceptionSupport: 1[m
+   webGLNameFilesAsHashes: 0[m
+   webGLShowDiagnostics: 0[m
+[36m@@ -799,7 +715,7 @@[m [mPlayerSettings:[m
+   webGLTemplate: APPLICATION:Default[m
+   webGLAnalyzeBuildSize: 0[m
+   webGLUseEmbeddedResources: 0[m
+[31m-  webGLCompressionFormat: 0[m
+[32m+[m[32m  webGLCompressionFormat: 1[m
+   webGLWasmArithmeticExceptions: 0[m
+   webGLLinkerTarget: 1[m
+   webGLThreadsSupport: 0[m
+[36m@@ -816,7 +732,24 @@[m [mPlayerSettings:[m
+   webGLWebAssemblyBigInt: 0[m
+   webGLCloseOnQuit: 0[m
+   webWasm2023: 0[m
+[31m-  scriptingDefineSymbols: {}[m
+[32m+[m[32m  scriptingDefineSymbols:[m
+[32m+[m[32m    Android: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    EmbeddedLinux: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    GameCoreXboxOne: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    LinuxHeadlessSimulation: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    Lumin: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    PS4: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    PS5: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    QNX: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    ReservedCFE: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    Stadia: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    Standalone: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    VisionOS: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    WebGL: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    Windows Store Apps: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    XboxOne: UNITY_POST_PROCESSING_STACK_V2[m
+[32m+[m[32m    tvOS: UNITY_POST_PROCESSING_STACK_V2[m
+   additionalCompilerArguments: {}[m
+   platformArchitecture: {}[m
+   scriptingBackend:[m
+[36m@@ -824,7 +757,20 @@[m [mPlayerSettings:[m
+   il2cppCompilerConfiguration: {}[m
+   il2cppCodeGeneration: {}[m
+   il2cppStacktraceInformation: {}[m
+[31m-  managedStrippingLevel: {}[m
+[32m+[m[32m  managedStrippingLevel:[m
+[32m+[m[32m    EmbeddedLinux: 1[m
+[32m+[m[32m    GameCoreScarlett: 1[m
+[32m+[m[32m    GameCoreXboxOne: 1[m
+[32m+[m[32m    Lumin: 1[m
+[32m+[m[32m    Nintendo Switch: 1[m
+[32m+[m[32m    PS4: 1[m
+[32m+[m[32m    PS5: 1[m
+[32m+[m[32m    Stadia: 1[m
+[32m+[m[32m    WebGL: 1[m
+[32m+[m[32m    Windows Store Apps: 1[m
+[32m+[m[32m    XboxOne: 1[m
+[32m+[m[32m    iPhone: 1[m
+[32m+[m[32m    tvOS: 1[m
+   incrementalIl2cppBuild: {}[m
+   suppressCommonWarnings: 1[m
+   allowUnsafeCode: 0[m
+[36m@@ -893,7 +839,8 @@[m [mPlayerSettings:[m
+   XboxOneOverrideIdentityName: [m
+   XboxOneOverrideIdentityPublisher: [m
+   vrEditorSettings: {}[m
+[31m-  cloudServicesEnabled: {}[m
+[32m+[m[32m  cloudServicesEnabled:[m
+[32m+[m[32m    UNet: 1[m
+   luminIcon:[m
+     m_Name: [m
+     m_ModelFolderPath: [m
+[36m@@ -913,12 +860,12 @@[m [mPlayerSettings:[m
+   qnxGraphicConfPath: [m
+   apiCompatibilityLevel: 6[m
+   captureStartupLogs: {}[m
+[31m-  activeInputHandler: 2[m
+[32m+[m[32m  activeInputHandler: 1[m
+   windowsGamepadBackendHint: 0[m
+   cloudProjectId: 602b7030-0d5f-4cb7-999e-f715c9f672ff[m
+   framebufferDepthMemorylessMode: 0[m
+   qualitySettingsNames: [][m
+[31m-  projectName: 3d-plaformer[m
+[32m+[m[32m  projectName:[m[41m [m
+   organizationId: unity_antr_-_ruedhjg[m
+   cloudEnabled: 0[m
+   legacyClampBlendShapeWeights: 0[m
+[1mdiff --git a/ProjectSettings/QualitySettings.asset b/ProjectSettings/QualitySettings.asset[m
+[1mindex f55198a..ef3efb5 100644[m
+[1m--- a/ProjectSettings/QualitySettings.asset[m
+[1m+++ b/ProjectSettings/QualitySettings.asset[m
+[36m@@ -4,10 +4,166 @@[m
+ QualitySettings:[m
+   m_ObjectHideFlags: 0[m
+   serializedVersion: 5[m
+[31m-  m_CurrentQuality: 1[m
+[32m+[m[32m  m_CurrentQuality: 5[m
+   m_QualitySettings:[m
+   - serializedVersion: 4[m
+[31m-    name: Mobile[m
+[32m+[m[32m    name: Very Low[m
+[32m+[m[32m    pixelLightCount: 0[m
+[32m+[m[32m    shadows: 0[m
+[32m+[m[32m    shadowResolution: 0[m
+[32m+[m[32m    shadowProjection: 1[m
+[32m+[m[32m    shadowCascades: 1[m
+[32m+[m[32m    shadowDistance: 15[m
+[32m+[m[32m    shadowNearPlaneOffset: 3[m
+[32m+[m[32m    shadowCascade2Split: 0.33333334[m
+[32m+[m[32m    shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}[m
+[32m+[m[32m    shadowmaskMode: 0[m
+[32m+[m[32m    skinWeights: 1[m
+[32m+[m[32m    globalTextureMipmapLimit: 1[m
+[32m+[m[32m    textureMipmapLimitSettings: [][m
+[32m+[m[32m    anisotropicTextures: 0[m
+[32m+[m[32m    antiAliasing: 0[m
+[32m+[m[32m    softParticles: 0[m
+[32m+[m[32m    softVegetation: 0[m
+[32m+[m[32m    realtimeReflectionProbes: 0[m
+[32m+[m[32m    billboardsFaceCameraPosition: 0[m
+[32m+[m[32m    useLegacyDetailDistribution: 1[m
+[32m+[m[32m    adaptiveVsync: 0[m
+[32m+[m[32m    vSyncCount: 0[m
+[32m+[m[32m    realtimeGICPUUsage: 25[m
+[32m+[m[32m    adaptiveVsyncExtraA: 0[m
+[32m+[m[32m    adaptiveVsyncExtraB: 0[m
+[32m+[m[32m    lodBias: 0.3[m
+[32m+[m[32m    maximumLODLevel: 0[m
+[32m+[m[32m    enableLODCrossFade: 1[m
+[32m+[m[32m    streamingMipmapsActive: 0[m
+[32m+[m[32m    streamingMipmapsAddAllCameras: 1[m
+[32m+[m[32m    streamingMipmapsMemoryBudget: 512[m
+[32m+[m[32m    streamingMipmapsRenderersPerFrame: 512[m
+[32m+[m[32m    streamingMipmapsMaxLevelReduction: 2[m
+[32m+[m[32m    streamingMipmapsMaxFileIORequests: 1024[m
+[32m+[m[32m    particleRaycastBudget: 4[m
+[32m+[m[32m    asyncUploadTimeSlice: 2[m
+[32m+[m[32m    asyncUploadBufferSize: 16[m
+[32m+[m[32m    asyncUploadPersistentBuffer: 1[m
+[32m+[m[32m    resolutionScalingFixedDPIFactor: 1[m
+[32m+[m[32m    customRenderPipeline: {fileID: 0}[m
+[32m+[m[32m    terrainQualityOverrides: 0[m
+[32m+[m[32m    terrainPixelError: 1[m
+[32m+[m[32m    terrainDetailDensityScale: 1[m
+[32m+[m[32m    terrainBasemapDistance: 1000[m
+[32m+[m[32m    terrainDetailDistance: 80[m
+[32m+[m[32m    terrainTreeDistance: 5000[m
+[32m+[m[32m    terrainBillboardStart: 50[m
+[32m+[m[32m    terrainFadeLength: 5[m
+[32m+[m[32m    terrainMaxTrees: 50[m
+[32m+[m[32m    excludedTargetPlatforms: [][m
+[32m+[m[32m  - serializedVersion: 4[m
+[32m+[m[32m    name: Low[m
+[32m+[m[32m    pixelLightCount: 0[m
+[32m+[m[32m    shadows: 0[m
+[32m+[m[32m    shadowResolution: 0[m
+[32m+[m[32m    shadowProjection: 1[m
+[32m+[m[32m    shadowCascades: 1[m
+[32m+[m[32m    shadowDistance: 20[m
+[32m+[m[32m    shadowNearPlaneOffset: 3[m
+[32m+[m[32m    shadowCascade2Split: 0.33333334[m
+[32m+[m[32m    shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}[m
+[32m+[m[32m    shadowmaskMode: 0[m
+[32m+[m[32m    skinWeights: 2[m
+[32m+[m[32m    globalTextureMipmapLimit: 0[m
+[32m+[m[32m    textureMipmapLimitSettings: [][m
+[32m+[m[32m    anisotropicTextures: 0[m
+[32m+[m[32m    antiAliasing: 0[m
+[32m+[m[32m    softParticles: 0[m
+[32m+[m[32m    softVegetation: 0[m
+[32m+[m[32m    realtimeReflectionProbes: 0[m
+[32m+[m[32m    billboardsFaceCameraPosition: 0[m
+[32m+[m[32m    useLegacyDetailDistribution: 1[m
+[32m+[m[32m    adaptiveVsync: 0[m
+[32m+[m[32m    vSyncCount: 0[m
+[32m+[m[32m    realtimeGICPUUsage: 25[m
+[32m+[m[32m    adaptiveVsyncExtraA: 0[m
+[32m+[m[32m    adaptiveVsyncExtraB: 0[m
+[32m+[m[32m    lodBias: 0.4[m
+[32m+[m[32m    maximumLODLevel: 0[m
+[32m+[m[32m    enableLODCrossFade: 1[m
+[32m+[m[32m    streamingMipmapsActive: 0[m
+[32m+[m[32m    streamingMipmapsAddAllCameras: 1[m
+[32m+[m[32m    streamingMipmapsMemoryBudget: 512[m
+[32m+[m[32m    streamingMipmapsRenderersPerFrame: 512[m
+[32m+[m[32m    streamingMipmapsMaxLevelReduction: 2[m
+[32m+[m[32m    streamingMipmapsMaxFileIORequests: 1024[m
+[32m+[m[32m    particleRaycastBudget: 16[m
+[32m+[m[32m    asyncUploadTimeSlice: 2[m
+[32m+[m[32m    asyncUploadBufferSize: 16[m
+[32m+[m[32m    asyncUploadPersistentBuffer: 1[m
+[32m+[m[32m    resolutionScalingFixedDPIFactor: 1[m
+[32m+[m[32m    customRenderPipeline: {fileID: 0}[m
+[32m+[m[32m    terrainQualityOverrides: 0[m
+[32m+[m[32m    terrainPixelError: 1[m
+[32m+[m[32m    terrainDetailDensityScale: 1[m
+[32m+[m[32m    terrainBasemapDistance: 1000[m
+[32m+[m[32m    terrainDetailDistance: 80[m
+[32m+[m[32m    terrainTreeDistance: 5000[m
+[32m+[m[32m    terrainBillboardStart: 50[m
+[32m+[m[32m    terrainFadeLength: 5[m
+[32m+[m[32m    terrainMaxTrees: 50[m
+[32m+[m[32m    excludedTargetPlatforms: [][m
+[32m+[m[32m  - serializedVersion: 4[m
+[32m+[m[32m    name: Medium[m
+[32m+[m[32m    pixelLightCount: 1[m
+[32m+[m[32m    shadows: 0[m
+[32m+[m[32m    shadowResolution: 0[m
+[32m+[m[32m    shadowProjection: 1[m
+[32m+[m[32m    shadowCascades: 1[m
+[32m+[m[32m    shadowDistance: 20[m
+[32m+[m[32m    shadowNearPlaneOffset: 3[m
+[32m+[m[32m    shadowCascade2Split: 0.33333334[m
+[32m+[m[32m    shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}[m
+[32m+[m[32m    shadowmaskMode: 0[m
+[32m+[m[32m    skinWeights: 2[m
+[32m+[m[32m    globalTextureMipmapLimit: 0[m
+[32m+[m[32m    textureMipmapLimitSettings: [][m
+[32m+[m[32m    anisotropicTextures: 1[m
+[32m+[m[32m    antiAliasing: 0[m
+[32m+[m[32m    softParticles: 0[m
+[32m+[m[32m    softVegetation: 0[m
+[32m+[m[32m    realtimeReflectionProbes: 0[m
+[32m+[m[32m    billboardsFaceCameraPosition: 0[m
+[32m+[m[32m    useLegacyDetailDistribution: 1[m
+[32m+[m[32m    adaptiveVsync: 0[m
+[32m+[m[32m    vSyncCount: 1[m
+[32m+[m[32m    realtimeGICPUUsage: 25[m
+[32m+[m[32m    adaptiveVsyncExtraA: 0[m
+[32m+[m[32m    adaptiveVsyncExtraB: 0[m
+[32m+[m[32m    lodBias: 0.7[m
+[32m+[m[32m    maximumLODLevel: 0[m
+[32m+[m[32m    enableLODCrossFade: 1[m
+[32m+[m[32m    streamingMipmapsActive: 0[m
+[32m+[m[32m    streamingMipmapsAddAllCameras: 1[m
+[32m+[m[32m    streamingMipmapsMemoryBudget: 512[m
+[32m+[m[32m    streamingMipmapsRenderersPerFrame: 512[m
+[32m+[m[32m    streamingMipmapsMaxLevelReduction: 2[m
+[32m+[m[32m    streamingMipmapsMaxFileIORequests: 1024[m
+[32m+[m[32m    particleRaycastBudget: 64[m
+[32m+[m[32m    asyncUploadTimeSlice: 2[m
+[32m+[m[32m    asyncUploadBufferSize: 16[m
+[32m+[m[32m    asyncUploadPersistentBuffer: 1[m
+[32m+[m[32m    resolutionScalingFixedDPIFactor: 1[m
+[32m+[m[32m    customRenderPipeline: {fileID: 0}[m
+[32m+[m[32m    terrainQualityOverrides: 0[m
+[32m+[m[32m    terrainPixelError: 1[m
+[32m+[m[32m    terrainDetailDensityScale: 1[m
+[32m+[m[32m    terrainBasemapDistance: 1000[m
+[32m+[m[32m    terrainDetailDistance: 80[m
+[32m+[m[32m    terrainTreeDistance: 5000[m
+[32m+[m[32m    terrainBillboardStart: 50[m
+[32m+[m[32m    terrainFadeLength: 5[m
+[32m+[m[32m    terrainMaxTrees: 50[m
+[32m+[m[32m    excludedTargetPlatforms: [][m
+[32m+[m[32m  - serializedVersion: 4[m
+[32m+[m[32m    name: High[m
+     pixelLightCount: 2[m
+     shadows: 2[m
+     shadowResolution: 1[m
+[36m@@ -17,7 +173,7 @@[m [mQualitySettings:[m
+     shadowNearPlaneOffset: 3[m
+     shadowCascade2Split: 0.33333334[m
+     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}[m
+[31m-    shadowmaskMode: 0[m
+[32m+[m[32m    shadowmaskMode: 1[m
+     skinWeights: 2[m
+     globalTextureMipmapLimit: 0[m
+     textureMipmapLimitSettings: [][m
+[36m@@ -25,12 +181,12 @@[m [mQualitySettings:[m
+     antiAliasing: 0[m
+     softParticles: 0[m
+     softVegetation: 1[m
+[31m-    realtimeReflectionProbes: 0[m
+[32m+[m[32m    realtimeReflectionProbes: 1[m
+     billboardsFaceCameraPosition: 1[m
+     useLegacyDetailDistribution: 1[m
+     adaptiveVsync: 0[m
+[31m-    vSyncCount: 0[m
+[31m-    realtimeGICPUUsage: 100[m
+[32m+[m[32m    vSyncCount: 1[m
+[32m+[m[32m    realtimeGICPUUsage: 50[m
+     adaptiveVsyncExtraA: 0[m
+     adaptiveVsyncExtraB: 0[m
+     lodBias: 1[m
+[36m@@ -47,8 +203,7 @@[m [mQualitySettings:[m
+     asyncUploadBufferSize: 16[m
+     asyncUploadPersistentBuffer: 1[m
+     resolutionScalingFixedDPIFactor: 1[m
+[31m-    customRenderPipeline: {fileID: 11400000, guid: 5e6cbd92db86f4b18aec3ed561671858,[m
+[31m-      type: 2}[m
+[32m+[m[32m    customRenderPipeline: {fileID: 0}[m
+     terrainQualityOverrides: 0[m
+     terrainPixelError: 1[m
+     terrainDetailDensityScale: 1[m
+[36m@@ -58,16 +213,15 @@[m [mQualitySettings:[m
+     terrainBillboardStart: 50[m
+     terrainFadeLength: 5[m
+     terrainMaxTrees: 50[m
+[31m-    excludedTargetPlatforms:[m
+[31m-    - Standalone[m
+[32m+[m[32m    excludedTargetPlatforms: [][m
+   - serializedVersion: 4[m
+[31m-    name: PC[m
+[31m-    pixelLightCount: 2[m
+[31m-    shadows: 2[m
+[31m-    shadowResolution: 1[m
+[32m+[m[32m    name: Very High[m
+[32m+[m[32m    pixelLightCount: 3[m
+[32m+[m[32m    shadows: 0[m
+[32m+[m[32m    shadowResolution: 2[m
+     shadowProjection: 1[m
+     shadowCascades: 2[m
+[31m-    shadowDistance: 40[m
+[32m+[m[32m    shadowDistance: 70[m
+     shadowNearPlaneOffset: 3[m
+     shadowCascade2Split: 0.33333334[m
+     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}[m
+[36m@@ -77,13 +231,65 @@[m [mQualitySettings:[m
+     textureMipmapLimitSettings: [][m
+     anisotropicTextures: 2[m
+     antiAliasing: 0[m
+[31m-    softParticles: 0[m
+[32m+[m[32m    softParticles: 1[m
+     softVegetation: 1[m
+[31m-    realtimeReflectionProbes: 0[m
+[32m+[m[32m    realtimeReflectionProbes: 1[m
+     billboardsFaceCameraPosition: 1[m
+     useLegacyDetailDistribution: 1[m
+     adaptiveVsync: 0[m
+[31m-    vSyncCount: 0[m
+[32m+[m[32m    vSyncCount: 1[m
+[32m+[m[32m    realtimeGICPUUsage: 50[m
+[32m+[m[32m    adaptiveVsyncExtraA: 0[m
+[32m+[m[32m    adaptiveVsyncExtraB: 0[m
+[32m+[m[32m    lodBias: 1.5[m
+[32m+[m[32m    maximumLODLevel: 0[m
+[32m+[m[32m    enableLODCrossFade: 1[m
+[32m+[m[32m    streamingMipmapsActive: 0[m
+[32m+[m[32m    streamingMipmapsAddAllCameras: 1[m
+[32m+[m[32m    streamingMipmapsMemoryBudget: 512[m
+[32m+[m[32m    streamingMipmapsRenderersPerFrame: 512[m
+[32m+[m[32m    streamingMipmapsMaxLevelReduction: 2[m
+[32m+[m[32m    streamingMipmapsMaxFileIORequests: 1024[m
+[32m+[m[32m    particleRaycastBudget: 1024[m
+[32m+[m[32m    asyncUploadTimeSlice: 2[m
+[32m+[m[32m    asyncUploadBufferSize: 16[m
+[32m+[m[32m    asyncUploadPersistentBuffer: 1[m
+[32m+[m[32m    resolutionScalingFixedDPIFactor: 1[m
+[32m+[m[32m    customRenderPipeline: {fileID: 0}[m
+[32m+[m[32m    terrainQualityOverrides: 0[m
+[32m+[m[32m    terrainPixelError: 1[m
+[32m+[m[32m    terrainDetailDensityScale: 1[m
+[32m+[m[32m    terrainBasemapDistance: 1000[m
+[32m+[m[32m    terrainDetailDistance: 80[m
+[32m+[m[32m    terrainTreeDistance: 5000[m
+[32m+[m[32m    terrainBillboardStart: 50[m
+[32m+[m[32m    terrainFadeLength: 5[m
+[32m+[m[32m    terrainMaxTrees: 50[m
+[32m+[m[32m    excludedTargetPlatforms: [][m
+[32m+[m[32m  - serializedVersion: 4[m
+[32m+[m[32m    name: Ultra[m
+[32m+[m[32m    pixelLightCount: 4[m
+[32m+[m[32m    shadows: 2[m
+[32m+[m[32m    shadowResolution: 2[m
+[32m+[m[32m    shadowProjection: 1[m
+[32m+[m[32m    shadowCascades: 4[m
+[32m+[m[32m    shadowDistance: 150[m
+[32m+[m[32m    shadowNearPlaneOffset: 3[m
+[32m+[m[32m    shadowCascade2Split: 0.33333334[m
+[32m+[m[32m    shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}[m
+[32m+[m[32m    shadowmaskMode: 1[m
+[32m+[m[32m    skinWeights: 4[m
+[32m+[m[32m    globalTextureMipmapLimit: 0[m
+[32m+[m[32m    textureMipmapLimitSettings: [][m
+[32m+[m[32m    anisotropicTextures: 2[m
+[32m+[m[32m    antiAliasing: 0[m
+[32m+[m[32m    softParticles: 1[m
+[32m+[m[32m    softVegetation: 1[m
+[32m+[m[32m    realtimeReflectionProbes: 1[m
+[32m+[m[32m    billboardsFaceCameraPosition: 1[m
+[32m+[m[32m    useLegacyDetailDistribution: 1[m
+[32m+[m[32m    adaptiveVsync: 0[m
+[32m+[m[32m    vSyncCount: 1[m
+     realtimeGICPUUsage: 100[m
+     adaptiveVsyncExtraA: 0[m
+     adaptiveVsyncExtraB: 0[m
+[36m@@ -96,13 +302,12 @@[m [mQualitySettings:[m
+     streamingMipmapsRenderersPerFrame: 512[m
+     streamingMipmapsMaxLevelReduction: 2[m
+     streamingMipmapsMaxFileIORequests: 1024[m
+[31m-    particleRaycastBudget: 256[m
+[32m+[m[32m    particleRaycastBudget: 4096[m
+     asyncUploadTimeSlice: 2[m
+     asyncUploadBufferSize: 16[m
+     asyncUploadPersistentBuffer: 1[m
+     resolutionScalingFixedDPIFactor: 1[m
+[31m-    customRenderPipeline: {fileID: 11400000, guid: 4b83569d67af61e458304325a23e5dfd,[m
+[31m-      type: 2}[m
+[32m+[m[32m    customRenderPipeline: {fileID: 0}[m
+     terrainQualityOverrides: 0[m
+     terrainPixelError: 1[m
+     terrainDetailDensityScale: 1[m
+[36m@@ -112,23 +317,20 @@[m [mQualitySettings:[m
+     terrainBillboardStart: 50[m
+     terrainFadeLength: 5[m
+     terrainMaxTrees: 50[m
+[31m-    excludedTargetPlatforms:[m
+[31m-    - Android[m
+[31m-    - iPhone[m
+[32m+[m[32m    excludedTargetPlatforms: [][m
+   m_TextureMipmapLimitGroupNames: [][m
+   m_PerPlatformDefaultQuality:[m
+[31m-    Android: 0[m
+[31m-    GameCoreScarlett: 1[m
+[31m-    GameCoreXboxOne: 1[m
+[31m-    Lumin: 0[m
+[31m-    Nintendo Switch: 1[m
+[31m-    PS4: 1[m
+[31m-    PS5: 1[m
+[32m+[m[32m    Android: 4[m
+[32m+[m[32m    Lumin: 5[m
+[32m+[m[32m    Nintendo 3DS: 5[m
+[32m+[m[32m    Nintendo Switch: 5[m
+[32m+[m[32m    PS4: 5[m
+[32m+[m[32m    PSP2: 2[m
+     Server: 0[m
+[31m-    Stadia: 0[m
+[31m-    Standalone: 1[m
+[31m-    WebGL: 0[m
+[31m-    Windows Store Apps: 0[m
+[31m-    XboxOne: 0[m
+[31m-    iPhone: 0[m
+[31m-    tvOS: 0[m
+[32m+[m[32m    Stadia: 5[m
+[32m+[m[32m    Standalone: 5[m
+[32m+[m[32m    WebGL: 5[m
+[32m+[m[32m    Windows Store Apps: 5[m
+[32m+[m[32m    XboxOne: 5[m
+[32m+[m[32m    iPhone: 2[m
+[32m+[m[32m    tvOS: 2[m
+[1mdiff --git a/ProjectSettings/TagManager.asset b/ProjectSettings/TagManager.asset[m
+[1mindex 6413d11..80fa79f 100644[m
+[1m--- a/ProjectSettings/TagManager.asset[m
+[1m+++ b/ProjectSettings/TagManager.asset[m
+[36m@@ -2,8 +2,21 @@[m
+ %TAG !u! tag:unity3d.com,2011:[m
+ --- !u!78 &1[m
+ TagManager:[m
+[31m-  serializedVersion: 2[m
+[31m-  tags: [][m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  tags:[m
+[32m+[m[32m  - Enemy[m
+[32m+[m[32m  - Hazard[m
+[32m+[m[32m  - Platform[m
+[32m+[m[32m  - Pole[m
+[32m+[m[32m  - Panel[m
+[32m+[m[32m  - Spring[m
+[32m+[m[32m  - Surface/Grass[m
+[32m+[m[32m  - Surface/Wood[m
+[32m+[m[32m  - Surface/Metal[m
+[32m+[m[32m  - Volume/Water[m
+[32m+[m[32m  - Interactive/Rail[m
+[32m+[m[32m  - Hitbox[m
+[32m+[m[32m  - Gravity Field[m
+   layers:[m
+   - Default[m
+   - TransparentFX[m
+[36m@@ -11,14 +24,14 @@[m [mTagManager:[m
+   - [m
+   - Water[m
+   - UI[m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[32m+[m[32m  - Post Processing[m
+[32m+[m[32m  - Rail[m
+[32m+[m[32m  - Ignore Projector[m
+[32m+[m[32m  - Camera Obstructor[m
+[32m+[m[32m  - Ignore Ledge Hanging[m
+[32m+[m[32m  - Ignore Ledge Climbing[m
+[32m+[m[32m  - Unstable Surface[m
+[32m+[m[32m  - Ignore Wall Sliding[m
+   - [m
+   - [m
+   - [m
+[36m@@ -43,34 +56,3 @@[m [mTagManager:[m
+     locked: 0[m
+   m_RenderingLayers:[m
+   - Default[m
+[31m-  - Light Layer 1[m
+[31m-  - Light Layer 2[m
+[31m-  - Light Layer 3[m
+[31m-  - Light Layer 4[m
+[31m-  - Light Layer 5[m
+[31m-  - Light Layer 6[m
+[31m-  - Light Layer 7[m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[31m-  - [m
+[1mdiff --git a/ProjectSettings/UnityConnectSettings.asset b/ProjectSettings/UnityConnectSettings.asset[m
+[1mindex a88bee0..6125b30 100644[m
+[1m--- a/ProjectSettings/UnityConnectSettings.asset[m
+[1m+++ b/ProjectSettings/UnityConnectSettings.asset[m
+[36m@@ -23,7 +23,6 @@[m [mUnityConnectSettings:[m
+     m_Enabled: 0[m
+     m_TestMode: 0[m
+     m_InitializeOnStartup: 1[m
+[31m-    m_PackageRequiringCoreStatsPresent: 0[m
+   UnityAdsSettings:[m
+     m_Enabled: 0[m
+     m_InitializeOnStartup: 1[m
