@@ -8,7 +8,7 @@ namespace PLAYERTWO.PlatformerProject
 	{
 		public bool isSolid;
 		public bool damageOnlyFromAbove;
-		public int damage = 1;
+		public int damage = 999;
 
 		protected Collider m_collider;
 
@@ -32,7 +32,8 @@ namespace PLAYERTWO.PlatformerProject
 		{
 			if (entity is Player player)
 			{
-				TryToApplyDamageTo(player);
+				player.health.Set(0);
+				player.Respawn();
 			}
 		}
 
