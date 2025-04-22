@@ -20,5 +20,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PLAYER TWO/Platformer Project/Examples/Scenes/TestLevelScene 2.unity
     guid: c7fa87c38f465d249b0f3b291e5de4d4
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 513c779e707738f45bb84851a80303c5
+  - enabled: 1
+    path: Assets/Scenes/Levels/city_0.unity
+    guid: 8f129a7a693306f4da82e258fce0695e
+  - enabled: 1
+    path: Assets/Scenes/Levels/level_0.unity
+    guid: fc949086959cb5645ad49cf11a6091f9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

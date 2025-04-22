@@ -8,6 +8,7 @@ namespace PLAYERTWO.PlatformerProject
 	{
 		public InputActionAsset actions;
 
+		
 		protected InputAction m_movement;
 		protected InputAction m_run;
 		protected InputAction m_jump;
@@ -33,6 +34,13 @@ namespace PLAYERTWO.PlatformerProject
 		protected const string k_mouseDeviceName = "Mouse";
 
 		protected const float k_jumpBuffer = 0.15f;
+		
+		public bool dashEnabled = false;
+		public bool stompEnabled = false;
+		public bool airDiveEnabled = false;
+		public bool glideEnabled = false;
+// Add more as needed
+
 
 		protected virtual void CacheActions()
 		{
@@ -144,11 +152,11 @@ namespace PLAYERTWO.PlatformerProject
 		public virtual bool GetSpinDown() => m_spin.WasPressedThisFrame();
 		public virtual bool GetPickAndDropDown() => m_pickAndDrop.WasPressedThisFrame();
 		public virtual bool GetCrouchAndCraw() => m_crouch.IsPressed();
-		public virtual bool GetAirDiveDown() => m_airDive.WasPressedThisFrame();
-		public virtual bool GetStompDown() => m_stomp.WasPressedThisFrame();
+		public virtual bool GetAirDiveDown() => airDiveEnabled && m_airDive.WasPressedThisFrame();
+		public virtual bool GetStompDown() => stompEnabled && m_stomp.WasPressedThisFrame();
 		public virtual bool GetReleaseLedgeDown() => m_releaseLedge.WasPressedThisFrame();
-		public virtual bool GetGlide() => m_glide.IsPressed();
-		public virtual bool GetDashDown() => m_dash.WasPressedThisFrame();
+		public virtual bool GetGlide() => glideEnabled && m_glide.IsPressed();
+		public virtual bool GetDashDown() => dashEnabled && m_dash.WasPressedThisFrame();
 		public virtual bool GetGrindBrake() => m_grindBrake.IsPressed();
 		public virtual bool GetPauseDown() => m_pause.WasPressedThisFrame();
 

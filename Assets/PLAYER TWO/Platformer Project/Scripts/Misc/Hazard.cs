@@ -24,7 +24,7 @@ namespace PLAYERTWO.PlatformerProject
 			if (!damageOnlyFromAbove || player.verticalVelocity.y < 0 &&
 				BoundsHelper.IsBellowPoint(m_collider, player.stepPosition))
 			{
-				player.ApplyDamage(damage, transform.position);
+				player.ApplyDamage(5, transform.position);
 			}
 		}
 
@@ -32,8 +32,12 @@ namespace PLAYERTWO.PlatformerProject
 		{
 			if (entity is Player player)
 			{
-				player.health.Set(0);
-				player.Respawn();
+				TryToApplyDamageTo(player);
+				// player.health.Set(0);
+				// player.Die();
+				// player.Respawn();
+				
+				// player.states.Change<DiePlayerState>();
 			}
 		}
 
