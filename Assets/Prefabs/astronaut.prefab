@@ -340,9 +340,9 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9088051, g: 0.6556604, b: 1, a: 1}
-      key1: {r: 0.7607843, g: 0.12941177, b: 0.9882353, a: 1}
-      key2: {r: 0.7607843, g: 0.12941177, b: 0.9882353, a: 0}
+      key0: {r: 0.654902, g: 0.7496868, b: 1, a: 1}
+      key1: {r: 0.13769959, g: 0.12941174, b: 0.9882353, a: 1}
+      key2: {r: 0.13769959, g: 0.12941174, b: 0.9882353, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
@@ -365,7 +365,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 3
     numCornerVertices: 0
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 698857577358643038}
   - component: {fileID: 2626636856273759278}
   m_Layer: 0
-  m_Name: astronaut
+  m_Name: Astronaut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1033,23 +1033,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump:
-  - {fileID: 8300000, guid: 05a2c990c2c35c847ab81322bc72c161, type: 3}
-  - {fileID: 8300000, guid: 55e721f1dfaef5246b02e46c56af95b8, type: 3}
-  - {fileID: 8300000, guid: 119550d83c92fca47916f66a9edd70fd, type: 3}
-  - {fileID: 8300000, guid: 6ddd2a11d84a7ef4db5280d0e8c34f90, type: 3}
-  - {fileID: 8300000, guid: 5d943caf3edecad4289608dc4bd37004, type: 3}
+  - {fileID: 8300000, guid: 706a563b0e7887740bd25bbb300eae0b, type: 3}
+  - {fileID: 8300000, guid: 904660d6357d3004897bb8a67df332b5, type: 3}
+  - {fileID: 8300000, guid: b21086047436d4c4bb1edfd70e7bbe62, type: 3}
+  - {fileID: 8300000, guid: 9173d37514b4d204b879e060e8abe8b3, type: 3}
+  - {fileID: 8300000, guid: c433cd06bd638304288be35a0fc65239, type: 3}
   hurt:
-  - {fileID: 8300000, guid: 91ca9eae86b8eb64c81d77383b4d1345, type: 3}
-  - {fileID: 8300000, guid: b31d3b4cf0c150b488c1b459fde24d14, type: 3}
-  - {fileID: 8300000, guid: 6f6dba85ef6f86e4fb638b0b40c9dfde, type: 3}
-  - {fileID: 8300000, guid: 2db5b203c93cf7e43b05a11c015d79d8, type: 3}
-  - {fileID: 8300000, guid: 8f1cee5a09de2534b987be28b6d0ae40, type: 3}
+  - {fileID: 8300000, guid: 14bfaeab22ca6194094f0bb1d8f914a5, type: 3}
+  - {fileID: 8300000, guid: ef657ba7284535742822581399537df9, type: 3}
+  - {fileID: 8300000, guid: a9443e491f2166543b2a1f14bba798c3, type: 3}
+  - {fileID: 8300000, guid: ffdc426b1195a04458f1cccf92a1747e, type: 3}
+  - {fileID: 8300000, guid: 508c8d9cd0861fe44ad6843cc1c392f2, type: 3}
   attack:
-  - {fileID: 8300000, guid: 377f7b96502b63644a7d0e812b59ef0c, type: 3}
-  - {fileID: 8300000, guid: 1ec35638e81eca945b1187a0b34a223e, type: 3}
-  - {fileID: 8300000, guid: 59b2b5fd30c91514992dc36f6d7629ac, type: 3}
-  - {fileID: 8300000, guid: 0fd0b68860a57724cbec859645499e9a, type: 3}
-  - {fileID: 8300000, guid: cba932ba791eab549be3f5f78f2a08bc, type: 3}
+  - {fileID: 8300000, guid: a4e43bfd63820e349aa2da33d638b9b2, type: 3}
+  - {fileID: 8300000, guid: 91a12fe690e9bb549997cc461e8f2c4d, type: 3}
+  - {fileID: 8300000, guid: 0737c020429809c4c90d891c3193422a, type: 3}
+  - {fileID: 8300000, guid: b4bdf94011a3091459853157fdc84c85, type: 3}
+  - {fileID: 8300000, guid: 672fd7eb005855e409f887af40ecd81f, type: 3}
   lift:
   - {fileID: 8300000, guid: 566bd2932ccec9840b7911235d0b14d6, type: 3}
   - {fileID: 8300000, guid: 4bb5bb93f43dabd4e8f20be8a236e001, type: 3}
@@ -1057,11 +1057,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4fdceff72ee54bd4aafccf73feea51d3, type: 3}
   - {fileID: 8300000, guid: 22f2ade9d9546e3478f6d365ba1810f9, type: 3}
   maneuver:
-  - {fileID: 8300000, guid: 915eb6dc1ad30b344a45bf3ef8af8bbd, type: 3}
-  - {fileID: 8300000, guid: 2963beb09d226b1458c89e64e3783bd9, type: 3}
-  - {fileID: 8300000, guid: 20a1bce754ad3e04d90fc75ae6faa7c5, type: 3}
+  - {fileID: 8300000, guid: 6b5d75827e6286d4db5d09b1ef088007, type: 3}
+  - {fileID: 8300000, guid: 87d2de2679045984bb9dee8c963316ca, type: 3}
+  - {fileID: 8300000, guid: 0d81075cc1c2e0c4c94ed6abbf5e64d6, type: 3}
   - {fileID: 8300000, guid: 06d80d09ca211844b98a596a48a4c458, type: 3}
-  - {fileID: 8300000, guid: 8871119f7d4bf6041817450a4768f29a, type: 3}
+  - {fileID: 8300000, guid: fb2732188b63d37448427acfc9426afb, type: 3}
   spin: {fileID: 8300000, guid: 82dec7b293dee164ea65df69a0359f39, type: 3}
   pickUp: {fileID: 8300000, guid: 41650ffaf0fdca24f9c18c3a24ac04be, type: 3}
   drop: {fileID: 8300000, guid: 75d0d69ba8d50834c92ff6e6ab73d522, type: 3}

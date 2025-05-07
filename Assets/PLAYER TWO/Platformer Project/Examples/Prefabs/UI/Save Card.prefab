@@ -103,7 +103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 904ebc3c2a9be194d8c832822f6a7e23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84a6427fd1e89c4478601bef42e98e16, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -521,6 +521,8 @@ MonoBehaviour:
   useScale: 1
   scaleMultiplier: 1.1
   scaleDuration: 0.1
+  useClickAudio: 1
+  useHighlightAudio: 1
   audioType: 3
 --- !u!222 &3543277350256254844
 CanvasRenderer:
@@ -881,7 +883,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 48cd0d333df24da4e8a41043e47b01b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b94659631e528e4db02275a44d8950e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

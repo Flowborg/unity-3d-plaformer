@@ -62,9 +62,9 @@ MonoBehaviour:
   initialRetries: 3
   levelExitScene: MainMenu
   levels:
-  - name: Humble Beginnings
-    description: The journey starts here
-    image: {fileID: 21300000, guid: 0fdcb442a767ee241973ec5533ff20fe, type: 3}
+  - name: Launch 1
+    description: Time to take off!
+    image: {fileID: 21300000, guid: 0181dad0deb9caa408ebfa87321fe005, type: 3}
     locked: 0
     requiredStars: 0
     scene: level_0
@@ -75,10 +75,21 @@ MonoBehaviour:
     exitScene: 
   - name: The City 1
     description: The big city
-    image: {fileID: 21300000, guid: a6c088a5080f2b244a4a1d9960fdcaab, type: 3}
+    image: {fileID: 21300000, guid: bc3c781ff970d674db91ea0c89e4ac04, type: 3}
     locked: 1
     requiredStars: 3
     scene: city_0
+    firstTimeScene: 
+    unlockNextLevel: 0
+    nextScene: MainMenu
+    firstTimeNextScene: 
+    exitScene: 
+  - name: Ship 1
+    description: 
+    image: {fileID: 21300000, guid: 56ab46a3be9052b498fd3bfc84a15178, type: 3}
+    locked: 1
+    requiredStars: 6
+    scene: level_1
     firstTimeScene: 
     unlockNextLevel: 0
     nextScene: MainMenu

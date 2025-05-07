@@ -237,9 +237,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.38431373, b: 0.99215686, a: 1}
-    m_PressedColor: {r: 1, g: 0.38431373, b: 0.99215686, a: 1}
-    m_SelectedColor: {r: 1, g: 0.38431373, b: 0.99215686, a: 1}
+    m_HighlightedColor: {r: 0.38431373, g: 0.49411765, b: 1, a: 1}
+    m_PressedColor: {r: 0.38431373, g: 0.49411765, b: 1, a: 1}
+    m_SelectedColor: {r: 0.38431373, g: 0.49411765, b: 1, a: 1}
     m_DisabledColor: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -278,5 +278,6 @@ MonoBehaviour:
   useScale: 1
   scaleMultiplier: 1.1
   scaleDuration: 0.1
-  highlightSound: {fileID: 8300000, guid: db8e60bcb802880459f22f2bb33e61ee, type: 3}
-  selectSound: {fileID: 8300000, guid: 7ef55b15281e988459be4b38e36962d9, type: 3}
+  useClickAudio: 1
+  useHighlightAudio: 1
+  audioType: 0

@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 29b8da6fbd3c2b542bf7bcda4beeab81
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Meshes/StreetProps.FBX
+  uploadId: 127808
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -762,10 +769,15 @@ ModelImporter:
   - first:
       95: 9500000
     second: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default
+    second: {fileID: 2100000, guid: 38e0f6c0765a5374f9a428840748d450, type: 2}
   materials:
-    materialImportMode: 0
-    materialName: 0
+    materialImportMode: 1
+    materialName: 1
     materialSearch: 1
     materialLocation: 0
   animations:
@@ -864,10 +876,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 67475
-  packageName: Low Poly Street Pack
-  packageVersion: 1.0
-  assetPath: Assets/LowpolyStreetPack/Meshes/StreetProps.FBX
-  uploadId: 127808
