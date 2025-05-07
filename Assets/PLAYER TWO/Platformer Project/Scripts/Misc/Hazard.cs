@@ -8,7 +8,7 @@ namespace PLAYERTWO.PlatformerProject
 	{
 		public bool isSolid;
 		public bool damageOnlyFromAbove;
-		public int damage = 1;
+		public int damage = 999;
 
 		protected Collider m_collider;
 
@@ -24,7 +24,7 @@ namespace PLAYERTWO.PlatformerProject
 			if (!damageOnlyFromAbove || player.verticalVelocity.y < 0 &&
 				BoundsHelper.IsBellowPoint(m_collider, player.stepPosition))
 			{
-				player.ApplyDamage(damage, transform.position);
+				player.ApplyDamage(5, transform.position);
 			}
 		}
 
@@ -33,6 +33,11 @@ namespace PLAYERTWO.PlatformerProject
 			if (entity is Player player)
 			{
 				TryToApplyDamageTo(player);
+				// player.health.Set(0);
+				// player.Die();
+				// player.Respawn();
+				
+				// player.states.Change<DiePlayerState>();
 			}
 		}
 
