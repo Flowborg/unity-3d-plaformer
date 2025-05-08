@@ -7,4 +7,4 @@ to-do
 
 
 distant future
--buy abilities with stars, levels unlock based on stars spent
+-buy abilities/stats with stars, levels unlock based on stars spent instead
